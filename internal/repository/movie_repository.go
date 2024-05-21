@@ -15,7 +15,7 @@ func NewMovieRepository(db *sqlx.DB) *MovieRepository{
 
 func (r *MovieRepository) GetRandomMovie() (*model.Movie, error) {
 	var movie model.Movie
-	err := r.db.Get(&movie, "SELECT * FROM movies ORDER BY random() LIMIT 1")
+	err := r.db.Get(&movie, "SELECT * FROM bollywood_full_1950_2019  ORDER BY random() LIMIT 1")
 	if err != nil {
 		return nil, err
 	}
